@@ -1,23 +1,9 @@
 [
   {
-    "objectID": "HW6.html",
-    "href": "HW6.html",
+    "objectID": "HW6.html#task2",
+    "href": "HW6.html#task2",
     "title": "HW6",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
-  },
-  {
-    "objectID": "HW6.html#quarto",
-    "href": "HW6.html#quarto",
-    "title": "HW6",
-    "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
-  },
-  {
-    "objectID": "HW6.html#running-code",
-    "href": "HW6.html#running-code",
-    "title": "HW6",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+    "section": "Task2",
+    "text": "Task2\n\nset.seed(10)\nn&lt;-100\nx&lt;-runif(n)\nresp&lt;-3+10*x+rnorm(n)\n\npred&lt;- predict(lm(resp~ x),data.frame(x))\n\n\ngetRMSE&lt;- function(a,b,c){\n  diff=(a-b)^2\n  mse=sqrt(1/c(sum(diff)))\n  return(mse)\n}\n\n\ngetRMSE(resp,pred,n)\n\n[1] 0.1043659\n\n\n\ngetMAE&lt;- function(a,b,c){\n  diff=abs(a-b)\n  mae=1/c(sum(diff))\n  return(mae)\n}\n\n\ngetMAE(resp,pred,n)\n\n[1] 0.01226125"
   }
 ]
