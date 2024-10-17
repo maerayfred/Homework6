@@ -40,3 +40,17 @@ getMAE<- function(a,b,c){
 getMAE(resp,pred,n)
 ```
 
+
+## Task3
+
+```{r}
+library("httr")
+library("jsonlite")
+install.packages("purr")
+library("purr")
+
+website<-httr::GET("https://newsapi.org/v2/everything?domains=wsj.com&apiKey=56c4ab95862a4378bc6174d85aafd391")
+website2<-fromJSON(rawToChar(website$content))
+
+```
+
